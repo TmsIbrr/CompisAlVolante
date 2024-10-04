@@ -1,0 +1,33 @@
+.login-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 80%;           
+  }
+  
+  form {
+    width: 70%;                 
+    border-style: solid;
+    border-color: black;
+    border-width: 0.5px;  
+    border-radius: 5px;  
+  }
+  
+  .custom-button{
+    border-radius: 1px;
+    width: 90%;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .custom-input {
+    margin-top: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+
+  }
