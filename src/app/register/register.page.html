@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="titulo-compis">
+    <h1>CompisAlVolante</h1>
+  </div>
+
+  <div class="container">
+    <form (ngSubmit)="registrar()">
+      <ion-item lines="none">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input class="custom-input" [(ngModel)]="email" name="email" type="email"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input class="custom-input" [(ngModel)]="password" name="password" type="password" ></ion-input>
+      </ion-item>
+      <div class="check-container">
+        <ion-checkbox labelPlacement="end"><strong>Terminos de servicio</strong></ion-checkbox>
+        <p>
+          Aceptas nuestros terminos de servicio
+        </p> 
+      </div>
+        <ion-button class="custom-button" color="dark" type="submit">Register</ion-button>
+      </form>
+  </div>
+  </ion-content>
