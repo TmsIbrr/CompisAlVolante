@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  liked: boolean = false;
+
   constructor() {}
 
+
+  toggleLike(){
+    this.liked = !this.liked;
+  }
 }
