@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+
+  <div class="container">
+    <form (ngSubmit)="addCompi()">
+      <div class="texto-container">
+        <h3 class="titulo"><strong>Nuevo Compi!</strong></h3>
+        <h4 class="texto">Rellena este formulario porfavor</h4>
+      </div>
+      <ion-item lines="none">
+        <ion-label position="floating">Desde</ion-label>
+        <ion-input class="custom-input"  name="desde" type="text"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="floating">Hacia</ion-label>
+        <ion-input class="custom-input"  name="hacia" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Tipo Compi</ion-label>
+        <ion-select  interface="popover" label-placement="floating">
+          <ion-select-option value="piloto">Piloto</ion-select-option>
+          <ion-select-option value="acompanante">Acompañante</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="check-container">
+        <ion-checkbox labelPlacement="end"><strong>Terminos de servicio</strong></ion-checkbox>
+        <p>
+          Aceptas nuestros terminos de servicio
+        </p> 
+      </div>
+        <ion-button class="custom-button" color="dark" type="submit">Nuevo Compi!</ion-button>
+      </form>
+  </div>
+  </ion-content>
