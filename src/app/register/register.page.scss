@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;          
+    flex-direction: column; 
+    height: 60%;    
+}
+
+form {
+    width: 70%;                 
+    border-style: solid;
+    border-color: grey;
+    border-width: 0.5px;  
+    border-radius: 5px;  
+}
+
+.custom-button{
+    border-radius: 200px;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 8%;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .custom-input {
+    margin-top: 20px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 10px;
+  }
+  
+
+  .titulo-compis {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+  }
+
+  p {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -1%;
+  }
+
+
+  ion-checkbox {
+    --size: 15px;
+    --checkbox-background-checked: black;
+  }
+  
+  ion-checkbox::part(container) {
+    border-radius: 2px;
+    border: 1px solid black;
+  }
+
+  .check-container {
+    padding-left: 5%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item lines="full">
+    <ion-avatar slot="start">
+      <img src="assets/avatar2.png" />
+    </ion-avatar>
+    <ion-label>
+      <h2>Jeremias Fernandez</h2>
+    </ion-label>
+  </ion-item>
+
+  <div class="chat-container">
+    <div class="mensaje">
+      <p>Hola!</p>
+    </div>
+    <div class="mensaje-enviado">
+      <p>Buenas!</p>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <ion-item>
+      <ion-input placeholder="Mensaje" type="text">        
+      </ion-input>
+    </ion-item>
+  </div>
+</ion-content>

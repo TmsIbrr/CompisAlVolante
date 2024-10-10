@@ -1,0 +1,25 @@
+
+
+ion-item {
+    --padding-start: 15px;
+    --padding-end: 15px;
+    margin-top: 3%;  
+  }
+
+  ion-button {
+    color: black;
+    border-radius: 10px;
+  }
+
+  .div-boton {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+  }
+
+  .boton-ver {
+    width: 80%;
+    border-radius: 20px;
+    border: 1px solid black;
+    color: blue;
+  }

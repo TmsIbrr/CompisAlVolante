@@ -1,0 +1,64 @@
+<ion-content [fullscreen]="true">
+
+  <ion-chip [outline]="true">
+    <ion-label>Tipo Compi</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+  
+  <ion-chip [outline]="true">
+    <ion-label>Estado</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+  
+  <ion-chip [outline]="true">
+    <ion-label>Desde</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+  
+  <ion-chip [outline]="true">
+    <ion-label>Hasta</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+    <!-- Lista de Compis -->
+    <ion-list>
+      <ion-item lines="full">
+        <ion-avatar slot="start">
+          <img src="assets/avatar1.png" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Martin Osorio</h2>
+          <p>Desde: La Pintana</p>
+          <p>Hacia: Sede San Bernardo</p>
+        </ion-label>
+        <ion-icon slot="end" name="heart-outline" [color]="liked ? 'danger' : 'medium'" (click)="toggleLike()"></ion-icon>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-avatar slot="start">
+          <img src="assets/avatar2.png" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Jeremias Fernandez</h2>
+          <p>Desde: La Cisterna</p>
+          <p>Hacia: Sede Puente Alto</p>
+        </ion-label>
+        <ion-icon slot="end" name="heart-outline"></ion-icon>
+      </ion-item>
+  
+      <ion-item lines="full">
+        <ion-avatar slot="start">
+          <img src="assets/avatar3.png" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Izumi Reyes</h2>
+          <p>Desde: Valparaíso</p>
+          <p>Hacia: Sede Maipú</p>
+        </ion-label>
+        <ion-icon slot="end" name="heart-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <div class="div-boton">
+      <ion-button class="boton-ver" fill="clear">Ver todos los Compis</ion-button>
+    </div>
+  </ion-content>
