@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Compi</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lista"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="compiData.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Desde</ion-label>
+    <ion-input [(ngModel)]="compiData.desde"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Hacia</ion-label>
+    <ion-input [(ngModel)]="compiData.hacia"></ion-input>
+  </ion-item>
+
+  <ion-button color="success" expand="block" (click)="saveCompiData()">Guardar Cambios</ion-button>
+</ion-content>
+

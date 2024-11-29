@@ -1,0 +1,57 @@
+<ion-content [fullscreen]="true">
+  <div class="login-wrapper">
+    <div class="titulo-compis">
+      <img src="assets/imagenes/compi.webp" alt="Logo de CompisAlVolante" />
+      <h1>CompisAlVolante</h1>
+    </div>
+    <div class="login-container">
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <ion-item lines="none">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input
+            class="custom-input"
+            [(ngModel)]="email"
+            name="email"
+            type="email"
+            required
+            email
+            autocomplete="email">
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input
+            class="custom-input"
+            [(ngModel)]="password"
+            name="password"
+            type="password"
+            required
+            minlength="5"
+            autocomplete="current-password">
+          </ion-input>
+        </ion-item>
+
+        <div *ngIf="errorMessage" class="error-message">
+          <p>{{ errorMessage }}</p>
+        </div>
+
+        <div class="btn-container">
+          <ion-button
+            class="custom-button login-button"
+            expand="block"
+            color="success"
+            type="submit"
+            [disabled]="loginForm.invalid">
+            Iniciar Sesión
+          </ion-button>
+        </div>
+        <div class="login-options">
+          <ion-button fill="clear" (click)="goToRecuperarContra()">¿Has olvidado tu contraseña?</ion-button>
+          <ion-button class="register-button" fill="clear" color="success" (click)="registrar()">Registro</ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>
+

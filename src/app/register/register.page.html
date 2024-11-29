@@ -1,0 +1,59 @@
+<ion-content>
+  <div class="header">
+    <img src="assets/imagenes/compi.webp" alt="CompisAlVolante Logo" class="logo" />
+    <h1>Regístrate</h1>
+  </div>
+
+  <form (ngSubmit)="registerUser()" class="form-container">
+    <ion-item>
+      <ion-label position="floating">Nombre Completo</ion-label>
+      <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input [(ngModel)]="telefono" name="telefono" type="tel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tipo de Usuario</ion-label>
+      <ion-select [(ngModel)]="tipoUsuario" name="tipoUsuario" (ionChange)="onTipoUsuarioChange()" required>
+        <ion-select-option value="Conductor">Conductor</ion-select-option>
+        <ion-select-option value="Pasajero">Pasajero</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div *ngIf="tipoUsuario === 'Conductor'" class="vehicle-fields">
+      <ion-item>
+        <ion-label position="floating">Color del Vehículo</ion-label>
+        <ion-input [(ngModel)]="vehiculoColor" name="vehiculoColor" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Modelo del Vehículo</ion-label>
+        <ion-input [(ngModel)]="vehiculoModelo" name="vehiculoModelo" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Placa del Vehículo</ion-label>
+        <ion-input [(ngModel)]="vehiculoPlaca" name="vehiculoPlaca" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Capacidad del Vehículo</ion-label>
+        <ion-input [(ngModel)]="vehiculoCapacidad" name="vehiculoCapacidad" type="number" required></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="btn-container">
+      <ion-button type="submit" expand="block" color="success">Registrarse</ion-button>
+    </div>
+  </form>
+</ion-content>

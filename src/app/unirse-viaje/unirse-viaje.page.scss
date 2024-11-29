@@ -1,0 +1,62 @@
+ion-content {
+  --background: linear-gradient(to bottom, #0c5237, #b3e5cd);
+  color: #ffffff; 
+  font-family: 'Arial', sans-serif;
+}
+
+.titulo-viaje h1 {
+  color: #ffffff; 
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  margin: 20px;
+  padding: 15px;
+  background-color: #ffffff; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.viaje-detalles p {
+  font-size: 1rem;
+  color: #0c5237;
+  margin: 10px 0;
+}
+
+ion-button {
+  --border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.boton-container ion-button {
+  margin-top: 20px;
+}
+
+ion-button[color="primary"] {
+  --background: #0c5237; 
+  --color: white;
+}
+
+ion-button[color="danger"] {
+  --background: #ff3b30; 
+  --color: white;
+}
+
+ion-item ion-input {
+  --border-radius: 5px;
+  --background: #ffffff;
+  --color: #0c5237; 
+}
+
+ion-button[fill="solid"] {
+  --background: #0c5237;
+  --color: white;
+}
+
+
+  
+  

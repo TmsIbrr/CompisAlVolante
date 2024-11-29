@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/locationiq-leaflet@1.0.0/dist/locationiq-leaflet.js"></script>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Compi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre del Viaje</ion-label>
+    <ion-input [(ngModel)]="nombre" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Asientos Disponibles</ion-label>
+    <ion-input [(ngModel)]="asientosDisponibles"  type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Fecha de Salida</ion-label>
+    <ion-input [(ngModel)]="salida"  type="datetime-local"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Inicio</ion-label>
+    <ion-input [(ngModel)]="startLocation" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Destino</ion-label>
+    <ion-input [(ngModel)]="endLocation" ></ion-input>
+  </ion-item>
+
+  <ion-button color="success" (click)="updateMap()">Actualizar Mapa</ion-button>
+  <div id="map" style="height: 300px;"></div>
+
+  <ion-button color="success" expand="full" (click)="updateCompi()">Actualizar Viaje</ion-button>
+</ion-content>

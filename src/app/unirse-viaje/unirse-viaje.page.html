@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Viaje</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lista"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="titulo-viaje">
+    <h1>Viaje {{ viajeData?.destino }}</h1>
+  </div>
+
+  <div class="container">
+
+    <div class="viaje-detalles">
+      <p><strong>Conductor:</strong> {{ viajeData?.nombreConductor || 'Información no disponible' }}</p>
+      <p><strong>Vehículo:</strong> {{ viajeData?.colorVehiculo || 'N/A' }}, {{ viajeData?.patenteVehiculo || 'N/A' }}</p>
+      <p><strong>Espacios Disponibles:</strong> {{ viajeData?.espaciosDisponibles || 'No disponible' }}</p>
+    </div>
+
+
+    <h2>Compis en el viaje:</h2>
+    <ion-list>
+      <ion-item *ngFor="let compi of viajeData?.compis">
+        <ion-label>{{ compi.nombre }}</ion-label>
+
+        <ion-button color="success" (click)="eliminarCompi(compi.id)">Eliminar</ion-button>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-item lines="none">
+      <ion-input [(ngModel)]="newCompiName" placeholder="Agregar nuevo compi"></ion-input>
+      <ion-button color="success" (click)="agregarCompi()">+</ion-button>
+    </ion-item>
+
+
+    <div class="boton-container">
+      <ion-button *ngIf="!isJoined" expand="block" color="success" (click)="unirseAlViaje()">Unirse al Viaje</ion-button>
+      <ion-button *ngIf="isJoined" expand="block" color="success" (click)="cancelarSolicitud()">Cancelar Solicitud</ion-button>
+    </div>
+  </div>
+</ion-content>
+
+
+

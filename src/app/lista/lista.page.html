@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Compis</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/add">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+   
+    <ion-row>
+      <ion-col>
+        <ion-chip>
+          <ion-label>Tipo Compi</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Estado</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Desde</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+        <ion-chip>
+          <ion-label>Hacia</ion-label>
+          <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+
+    
+    <ion-list>
+      <ion-item *ngFor="let viaje of viajes">
+        <ion-avatar slot="start">
+          <img [src]="viaje.avatar || 'assets/imagenes/compi.webp'" />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ viaje.nombre }}</h2>
+          <p>Desde: {{ viaje.startLocation|| 'No especificado'         }}</p>
+          <p>Hacia: {{ viaje.endLocation  || 'No especificado'         }}</p>
+          <p>Asientos disponibles:        {{ viaje.asientosDisponibles }}</p>
+          <p>Fecha salida:                {{ viaje.salida              }}</p>
+        </ion-label>
+        
+        <ion-buttons slot="end">
+          <ion-button color="primary" (click)="updateViaje(viaje)">
+            <ion-icon name="create-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="danger" (click)="deleteCompi(viaje.id)">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="success" (click)="irADetallesViaje(viaje.id)">
+            <ion-icon name="car-outline"></ion-icon>
+            <ion-label>Unirse</ion-label>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+
+    <div class="div-boton">
+      <ion-button class="boton-ver" color="success" fill="solid" expand="block">Cargar más Compis</ion-button>
+    </div>
+  </ion-grid>
+</ion-content>
+

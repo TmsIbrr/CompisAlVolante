@@ -1,0 +1,29 @@
+
+#map {
+    height: 100%;
+  }
+  ion-item ion-label {
+    color: #000000; 
+  }
+  
+  ion-input {
+    color: #00aa69; 
+  }
+  
+  ion-content {
+    --background: linear-gradient(to bottom, #d6f5e7, #b3e5cd); 
+    color: #0c5237; 
+  }
+  ion-header {
+    --background: linear-gradient(to bottom, #d6f5e7, #b3e5cd); 
+  }
+  
+  ion-toolbar {
+    --background: transparent; 
+  }
+  
+  ion-title {
+    color: #0c5237; 
+    font-weight: bold; 
+  }
+  

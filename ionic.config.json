@@ -1,0 +1,7 @@
+{
+  "name": "CompisAlVolanteApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

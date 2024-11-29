@@ -1,0 +1,43 @@
+<ion-content class="home-content">
+  <ion-card class="header-update-card">
+    <ion-card-header>
+      <ion-card-title>Nueva Actualización 1.3 🚀</ion-card-title>
+      <ion-card-subtitle>Mejoras de rendimiento</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" color="success" (click)="openUpdateDetails()">Leer más</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <div class="titulo">
+    <h2 class="section-title">Compis Disponibles</h2>
+  </div>
+
+  <ion-list>
+    <ion-item class="compi-item" *ngFor="let viaje of viajes">
+      <ion-avatar slot="start">
+        <img [src]="viaje.avatar || 'assets/imagenes/compi.webp'" />
+      </ion-avatar>
+      <ion-label>
+        <h3>{{ viaje.nombre }}</h3>
+        <p><strong>Desde:</strong> {{ viaje.startLocation || 'No especificado' }}</p>
+        <p><strong>Hacia:</strong> {{ viaje.endLocation || 'No especificado' }}</p>
+        <p><strong>Asientos disponibles:</strong> {{ viaje.asientosDisponibles }}</p>
+      </ion-label>
+      <ion-button fill="clear" slot="end" (click)="toggleLike(viaje)">
+        <ion-icon
+          slot="icon-only"
+          name="heart-outline"
+          [color]="viaje.liked ? 'danger' : 'medium'">
+        </ion-icon>
+      </ion-button>
+      
+    </ion-item>
+  </ion-list>
+  <div class="div-boton">
+    <ion-button expand="block" color="success" (click)="VerCompis()">Ver todos los Compis</ion-button>
+  </div>
+</ion-content>
+
+
+
+

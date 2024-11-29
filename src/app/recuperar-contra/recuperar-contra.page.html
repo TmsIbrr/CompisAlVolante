@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="titulo-compis">
+    <h1>Recuperar Contraseña</h1>
+  </div>
+
+  <div class="container">
+    <form (ngSubmit)="resetPassword()" #forgotForm="ngForm">
+      <ion-item lines="none">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+      </ion-item>
+
+      <div *ngIf="errorMessage" class="error-message">
+        <p>{{ errorMessage }}</p>
+      </div>
+
+      <div *ngIf="successMessage" class="success-message">
+        <p>{{ successMessage }}</p>
+      </div>
+
+      <div class="button-container">
+        <ion-button class="custom-button" color="dark" type="submit" [disabled]="forgotForm.invalid">
+          Enviar
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>
