@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { NavController, AlertController } from '@ionic/angular';
 import { ViajesService } from '../services/viajes.service';
 import { Viaje } from '../models/viaje.model'; 
 import * as L from 'leaflet';
+=======
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
 
 @Component({
   selector: 'app-add',
   templateUrl: './add.page.html',
   styleUrls: ['./add.page.scss'],
 })
+<<<<<<< HEAD
 
 export class AddPage implements OnInit {
   nombreViaje: string = ''; // Nombre del viaje
@@ -198,4 +202,17 @@ export class AddPage implements OnInit {
   generateUniqueId(): string {
     return (Math.random() + 1).toString(36).substring(7);  
   }
+=======
+export class AddPage implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  addCompi() {
+    
+  }
+
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
 }

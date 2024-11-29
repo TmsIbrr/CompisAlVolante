@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ion-content {
   --background: linear-gradient(to bottom, #d6f5e7, #b3e5cd); 
   color: #0c5237; 
@@ -120,3 +121,30 @@ div.boton-ver {
   --color: white; 
   transition: all 0.3s ease; 
 }
+=======
+
+
+ion-item {
+    --padding-start: 15px;
+    --padding-end: 15px;
+    margin-top: 3%;  
+  }
+
+  ion-button {
+    color: black;
+    border-radius: 10px;
+  }
+
+  .div-boton {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+  }
+
+  .boton-ver {
+    width: 80%;
+    border-radius: 20px;
+    border: 1px solid black;
+    color: blue;
+  }
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd

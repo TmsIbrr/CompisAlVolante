@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { ViajesService } from '../services/viajes.service';
 import { Viaje } from '../models/viaje.model';
@@ -48,3 +49,23 @@ export class HomePage implements OnInit {
   }
 }
 
+=======
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+})
+export class HomePage {
+
+  liked: boolean = false;
+
+  constructor() {}
+
+
+  toggleLike(){
+    this.liked = !this.liked;
+  }
+}
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd

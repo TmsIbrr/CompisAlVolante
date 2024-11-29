@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ion-content {
   --background: linear-gradient(to bottom, #d6f5e7, #b3e5cd);  
   color: #0c5237;  
@@ -69,3 +70,88 @@ ion-list .compi-item ion-icon {
 
 
 
+=======
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.header-update {
+  text-align: center;
+  background: none;
+  background-image: url('/assets/imagenes/imagen.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40%;
+  position: relative;
+}
+
+.header-update ion-card {
+  background: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  border: none;
+}
+
+.header-update img {
+  width: 100%;
+  height: auto;
+}
+
+ion-item {
+  --padding-start: 15px;
+  --padding-end: 15px;
+}
+
+ion-button {
+  color: black;
+  border-radius: 10px;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.div-boton {
+  display: flex;
+  justify-content: center;
+}
+
+.boton-ver {
+  width: 80%;
+  border-radius: 20px;
+  border: 1px solid black;
+  color: blue;
+}
+
+ion-item {
+  margin-top: 3%;  
+}
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd

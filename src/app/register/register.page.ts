@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { NavController, LoadingController, AlertController } from '@ionic/angular';
+=======
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
 })
+<<<<<<< HEAD
 export class RegisterPage {
   nombre: string = '';
   email: string = '';
@@ -117,4 +123,20 @@ export class RegisterPage {
     });
     await alert.present();
   }
+=======
+export class RegisterPage implements OnInit {
+
+  email: string = "";
+  password: string = "";
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  registrar(){
+    
+  }
+
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
 }

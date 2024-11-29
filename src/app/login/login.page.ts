@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { NavController, LoadingController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AnimationController } from '@ionic/angular';
 import { Token } from '@angular/compiler';
+=======
+import { NavController } from '@ionic/angular';
+import { AnimationController } from '@ionic/angular';
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+<<<<<<< HEAD
 export class LoginPage implements OnInit {
   email: string = "";
   password: string = "";
@@ -73,6 +79,30 @@ export class LoginPage implements OnInit {
   }
 
   animacionLogin() {
+=======
+export class LoginPage {
+
+  email: string = "";
+  password: string = "";
+
+  constructor(private navCtrl: NavController, private animationCtrl : AnimationController) { }
+
+  emailGuardado: string = "admin@duoc.cl";
+  passwordGuardado: string = "12345";
+  async login(){
+    if(this.email === this.emailGuardado && this.password === this.passwordGuardado){
+      this.animacionLogin();
+      await this.delay(2000);
+      this.navCtrl.navigateRoot('/home');
+    } else {
+      alert("Email o contraseña incorrectos");
+    }
+  }
+
+  ngOnInit() {
+  }
+  animacionLogin(){
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
     const button = document.querySelector('.login-button');
     if (button) {
       const buttonAnimation = this.animationCtrl.create()
@@ -81,12 +111,17 @@ export class LoginPage implements OnInit {
         .iterations(1)
         .fromTo('transform', 'scale(1)', 'scale(1.2)')
         .fromTo('opacity', '1', '0.5');
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
       buttonAnimation.play();
     } else {
       console.error('Elemento .login-button no encontrado');
     }
   }
+<<<<<<< HEAD
 
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -97,6 +132,12 @@ export class LoginPage implements OnInit {
   }
 
   registrar() {
+=======
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  registrar(){
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
     this.navCtrl.navigateRoot('/register');
   }
 }

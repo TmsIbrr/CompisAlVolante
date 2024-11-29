@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit, OnDestroy } from '@angular/core'; 
 import { ViajesService } from '../services/viajes.service';
 import { Viaje } from '../models/viaje.model';
@@ -79,3 +80,26 @@ export class ListaPage implements OnInit, OnDestroy {
 
 
 
+=======
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-lista',
+  templateUrl: './lista.page.html',
+  styleUrls: ['./lista.page.scss'],
+})
+export class ListaPage implements OnInit {
+
+  liked: boolean = false;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+
+  toggleLike(){
+    this.liked = !this.liked;
+  }
+}
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd

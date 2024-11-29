@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
@@ -17,3 +18,8 @@ export const environment = {
 // Inicializar Firebase
 const app = initializeApp(environment.firebaseConfig);
 export const db = getFirestore(app);
+=======
+export const environment = {
+  production: true
+};
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd

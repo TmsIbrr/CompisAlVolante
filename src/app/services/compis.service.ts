@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { Firestore, collection, addDoc, doc, updateDoc, deleteDoc, getDocs, getDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../environments/environment.prod';
 import { Observable } from 'rxjs';
 import { Viaje } from '../models/viaje.model';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+=======
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompisService {
+<<<<<<< HEAD
   private compisCollection = collection(db, 'compis');
 
   constructor(private firestore: AngularFirestore) {}
@@ -87,3 +91,8 @@ export class CompisService {
 
 
 
+=======
+
+  constructor() { }
+}
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd

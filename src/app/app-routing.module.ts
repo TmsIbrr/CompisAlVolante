@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+<<<<<<< HEAD
 //Importando AuthGuard
 import { AuthGuard } from './guards/auth.guard';
 
@@ -8,6 +9,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule), canActivate: [AuthGuard]
+=======
+const routes: Routes = [
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
   },
   {
     path: '',
@@ -24,6 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'add',
+<<<<<<< HEAD
     loadChildren: () => import('./add/add.module').then( m => m.AddPageModule), canActivate: [AuthGuard]
   },
   {
@@ -61,6 +69,19 @@ const routes: Routes = [
 
   ];
 
+=======
+    loadChildren: () => import('./add/add.module').then( m => m.AddPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'lista',
+    loadChildren: () => import('./lista/lista.module').then( m => m.ListaPageModule)
+  },
+];
+>>>>>>> 6137038780b8e8587796cb39d1a036ef6c2d79fd
 
 @NgModule({
   imports: [
